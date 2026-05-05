@@ -1,14 +1,24 @@
-import { useState } from 'react'
-import './App.css'
+import { NavLink } from 'react-router-dom'
 
-function Nav() {
+function Navbar() {
   return (
-    <>
-      <div>
-        <h1>testing</h1>
+    <nav className="navbar">
+      <NavLink to="/" className="nav-brand">
+        LeetTracker
+      </NavLink>
+      <div className="nav-links">
+        <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Dashboard
+        </NavLink>
+        <NavLink to="/roadmap" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Roadmap
+        </NavLink>
+        <NavLink to="/randomizer" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Randomizer
+        </NavLink>
       </div>
-    </>
+    </nav>
   )
 }
 
-export default Nav
+export default Navbar

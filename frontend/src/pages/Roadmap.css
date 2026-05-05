@@ -1,0 +1,157 @@
+.roadmap-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.roadmap-summary {
+  margin-top: var(--space-2);
+  padding: var(--space-3);
+  background: var(--bg-secondary);
+}
+
+.summary-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-2);
+}
+
+.summary-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.summary-fraction {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.roadmap-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.topic-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-3);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.topic-header:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.topic-title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.toggle-icon {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.topic-name {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.topic-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.topic-fraction {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.mini-progress-container {
+  width: 80px;
+  height: 4px;
+  background-color: var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.problem-list {
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.problem-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem var(--space-3);
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: var(--transition-fast);
+}
+
+.problem-item:last-child {
+  border-bottom: none;
+}
+
+.problem-item:hover {
+  background-color: var(--bg-secondary);
+  padding-left: calc(var(--space-3) + 4px);
+}
+
+.problem-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.problem-title {
+  flex: 1;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.problem-item:hover .problem-title {
+  color: var(--text-primary);
+}
+
+.problem-item.completed .problem-title {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.loading, .error-state {
+  text-align: center;
+  padding: var(--space-6);
+  color: var(--text-secondary);
+}
+
+.error-state {
+  color: var(--error);
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.1);
+}
